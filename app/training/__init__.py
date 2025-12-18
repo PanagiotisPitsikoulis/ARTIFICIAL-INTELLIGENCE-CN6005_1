@@ -1,4 +1,4 @@
-"""Training and evaluation module."""
+"""Μοναδα εκπαιδευσης και αξιολογησης."""
 
 from .trainer import Trainer, EarlyStopping
 from .evaluation import analyze_generalization, evaluate_model

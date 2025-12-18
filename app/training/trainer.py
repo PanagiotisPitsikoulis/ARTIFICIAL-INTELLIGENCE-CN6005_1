@@ -383,7 +383,7 @@ class Trainer:
 
     def load_model(self, path: str):
         """Φορτωση του μοντελου απο αρχειο."""
-        checkpoint = torch.load(path, map_location=self.device)
+        checkpoint = torch.load(path, map_location=self.device, weights_only=False)
         self.model.load_state_dict(checkpoint['model_state_dict'])
         self.history = checkpoint.get('history', self.history)
         print(f"Το μοντελο φορτωθηκε απο {path}")

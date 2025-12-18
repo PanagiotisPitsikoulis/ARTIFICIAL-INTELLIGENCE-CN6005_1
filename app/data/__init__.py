@@ -1,4 +1,4 @@
-"""Data loading and preprocessing module."""
+"""Μοναδα φορτωσης και προεπεξεργασιας δεδομενων."""
 
 from .preprocessing import (
     load_data,

@@ -1,4 +1,4 @@
-"""Visualization module for plots and charts."""
+"""Μοναδα οπτικοποιησης για γραφηματα."""
 
 from .plots import (
     plot_training_curves,

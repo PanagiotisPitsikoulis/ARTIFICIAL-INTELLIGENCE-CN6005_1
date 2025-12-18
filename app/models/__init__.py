@@ -1,4 +1,4 @@
-"""Neural network models module."""
+"""Μοναδα μοντελων νευρωνικων δικτυων."""
 
 from .network import HeartDiseaseClassifier, create_model
 

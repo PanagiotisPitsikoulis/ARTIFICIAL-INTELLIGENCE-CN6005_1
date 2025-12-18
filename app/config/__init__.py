@@ -1,4 +1,4 @@
-"""Configuration module for Heart Disease Classification."""
+"""Μοναδα ρυθμισεων για Ταξινομηση Καρδιακων Παθησεων."""
 
 from .settings import Config, TrainingConfig, ModelConfig, DataConfig, default_config
 

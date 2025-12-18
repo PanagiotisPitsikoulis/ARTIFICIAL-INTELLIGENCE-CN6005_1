@@ -168,8 +168,8 @@ class TestMetrics:
         """Ελεγχει τον υπολογισμο κενων γενικευσης"""
         gaps = calculate_generalization_gap(0.95, 0.90, 0.88)
 
-        assert gaps['train_val_gap'] == 0.05
-        assert gaps['train_test_gap'] == 0.07
+        assert abs(gaps['train_val_gap'] - 0.05) < 0.001
+        assert abs(gaps['train_test_gap'] - 0.07) < 0.001
         assert abs(gaps['val_test_gap'] - 0.02) < 0.001
 
 
