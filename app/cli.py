@@ -532,6 +532,16 @@ def main_menu():
             break
 
 
+def run_fallback_mode():
+    """Εκτελεση σε λειτουργια χωρις διαδραστικο μενου."""
+    console.print("\n[yellow]Δεν βρεθηκε διαδραστικο τερματικο.[/yellow]")
+    console.print("[dim]Εκτελεση σε απλη λειτουργια...[/dim]\n")
+
+    # Εκτελεση του main.py αντι για το διαδραστικο CLI
+    from app.main import main as run_main
+    run_main()
+
+
 def main():
     """Σημειο εισοδου CLI."""
     try:
@@ -539,6 +549,13 @@ def main():
     except KeyboardInterrupt:
         console.print("\n\n[yellow]Διακοπη απο χρηστη.[/yellow]")
         sys.exit(0)
+    except Exception as e:
+        # Ελεγχος για σφαλμα τερματικου Windows
+        error_name = type(e).__name__
+        if "NoConsoleScreenBufferError" in error_name or "No Windows console" in str(e):
+            run_fallback_mode()
+        else:
+            raise
 
 
 if __name__ == '__main__':
