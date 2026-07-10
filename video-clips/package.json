@@ -1,0 +1,29 @@
+{
+  "name": "video-clips",
+  "version": "1.0.0",
+  "description": "Create Twitter and Reddit clips from screen recordings using Remotion",
+  "scripts": {
+    "start": "remotion studio",
+    "build": "remotion bundle",
+    "render": "remotion render",
+    "render:twitter-square": "remotion render TwitterClipSquare out/twitter-square.mp4",
+    "render:twitter-wide": "remotion render TwitterClipWide out/twitter-wide.mp4",
+    "render:reddit": "remotion render RedditClip out/reddit.mp4",
+    "render:reddit-vertical": "remotion render RedditClipVertical out/reddit-vertical.mp4",
+    "upgrade": "remotion upgrade"
+  },
+  "dependencies": {
+    "@remotion/cli": "^4.0.0",
+    "@remotion/player": "^4.0.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "remotion": "^4.0.0",
+    "zod": "^3.23.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "typescript": "^5.5.0"
+  }
+}
